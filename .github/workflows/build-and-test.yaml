@@ -22,7 +22,7 @@ jobs:
       - name: Test the code
         run: mvn test
       - name: build docker image
-        run: docker build -t srorange123/springboot-backend:gta
+        run: docker build -t srorange123/springboot-backend:gta .
       - name: show the docker build image
         run: ls 
       - name: Logging into docker
