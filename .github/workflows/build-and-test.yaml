@@ -23,7 +23,8 @@ jobs:
         run: mvn test
       - name: build docker image
         run: docker image build -t srorange123/springboot-backend:gta
-        run: ls
+      - name: show the docker build image
+        run: ls 
       - name: Logging into docker
         uses: docker/login-action@v4
         with:
