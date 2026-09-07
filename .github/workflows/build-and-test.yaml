@@ -7,8 +7,11 @@ jobs:
     steps:
       - name: Checking out the code
         uses: actions/checkout@v7
-      - name: Is code present
-        run: ls
+      - name: Build the code
+        run: mvn clean install -DskipTests=true
+      - name: Test the code
+        run: mvn test
+
 
 
     
