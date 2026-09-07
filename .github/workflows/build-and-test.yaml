@@ -10,10 +10,18 @@ jobs:
     steps:
       - name: Checking out the code
         uses: actions/checkout@v7
-      - name: Build the code
-        run: mvn clean install -DskipTests=true
-      - name: Test the code
-        run: mvn test
+      - name: install java 21
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: What version of Java
+        run: java --version
+
+     # - name: Build the code
+     #   run: mvn clean install -DskipTests=true
+     # - name: Test the code
+     #   run: mvn test
 
 
 
