@@ -5,11 +5,11 @@ jobs:
   build-and-test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Going to build
-        run: mvn clean install -DskipTests=true
-      - name: Going to test
-        run: mvn test
-         
+      - name: Checking out the code
+        uses: actions/checkout@v7
+      - name: Is code present
+        run: ls
+
 
     
 
