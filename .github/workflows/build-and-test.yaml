@@ -1,0 +1,18 @@
+name: Backend application build and Test
+on:
+  workflow_dispatch:
+jobs:
+  build-and-test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Going to build
+        run: mvn clean install -DskipTests=true
+      - name: Going to test
+        run: mvn test
+
+    
+
+
+
+
+
